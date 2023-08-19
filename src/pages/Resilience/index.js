@@ -17,7 +17,7 @@ export const Resilience = () => {
                             {getOdometer(data.inferences,"#427ae3")}
                         </div>}
                         {data.recomondations?.length > 0 && <div>
-                            {getTitle("Recomondations", "#800080")}
+                            {getTitle("Recommendations", "#800080")}
                             {getData(data.recomondations,"#800080")}
                         </div>}
                         {data.predictions?.length > 0 && <div className='mt-2'>

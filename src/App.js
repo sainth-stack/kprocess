@@ -13,8 +13,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AdminLayout />}>
-          <Route path="/" element={<ResourceManagement />} />
-          <Route path="/kprocess" element={<KProcess />} />
+          {/* <Route path="/" element={<ResourceManagement />} /> */}
+          <Route path="/" element={<KProcess />} />
           <Route path='/sustainability' element={<Sustainability/>} />
           <Route path='/resilience' element={<Resilience/>} />
           <Route path='/productivity' element={<InnerProductivity/>} />

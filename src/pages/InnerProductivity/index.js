@@ -67,7 +67,7 @@ export const InnerProductivity = () => {
                             {getData(data[0].inferences, "#427ae3")}
                         </div>}
                         {data[0].recomondations?.length > 0 && <div className="mt-3">
-                            {getTitle("Recomondations", "#800080")}
+                            {getTitle("Recommendations", "#800080")}
                             {getData(data[0].recomondations, "#800080")}
                         </div>}
                         {data[0].predictions?.length > 0 && <div className='mt-3'>
@@ -103,7 +103,7 @@ export const InnerProductivity = () => {
                             {getData(data[1].inferences, "#427ae3")}
                         </div>}
                         {data[1].recomondations?.length > 0 && <div className="mt-3">
-                            {getTitle("Recomondations", "#800080")}
+                            {getTitle("Recommendations", "#800080")}
                             {getData(data[1].recomondations, "#800080")}
                         </div>}
                         {data[1].predictions?.length > 0 && <div className='mt-3'>
@@ -145,7 +145,7 @@ export const InnerProductivity = () => {
                             {getData(data[2].inferences, "#427ae3")}
                         </div>}
                         {data[2].recomondations?.length > 0 && <div className="mt-3">
-                            {getTitle("Recomondations", "#800080")}
+                            {getTitle("Recommendations", "#800080")}
                             {getData(data[2].recomondations, "#800080")}
                         </div>}
                         {data[2].predictions?.length > 0 && <div className='mt-3'>

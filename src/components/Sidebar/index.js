@@ -18,24 +18,24 @@ export default function Sidebar() {
               <span class="ms-1 d-none d-sm-inline link-text text-black px-1">kProcess</span>
             </Link>
           </li>
-          {/* <li class="sidebar-list-item pt-4 cursor-pointer">
-            <Link to="/timesheet" class="nav-link align-middle px-2 nav-item">
+          <li class="sidebar-list-item pt-4 cursor-pointer">
+            <Link to="/productivity" class="nav-link align-middle px-2 nav-item">
              <LuFileClock size={20}/>
-              <span class="ms-1 d-none d-sm-inline link-text px-1">TimeSheet</span>
+              <span class="ms-1 d-none d-sm-inline link-text px-1">Productivity</span>
             </Link>
           </li>
           <li class="sidebar-list-item pt-4 cursor-pointer">
-            <Link to="/projects" class="nav-link align-middle px-2 nav-item">
+            <Link to="/sustainability" class="nav-link align-middle px-2 nav-item">
              <VscFileSymlinkDirectory size={20}/>
-              <span class="ms-1 d-none d-sm-inline link-text px-1">Projects</span>
+              <span class="ms-1 d-none d-sm-inline link-text px-1">Sustainability</span>
             </Link>
           </li>
           <li class="sidebar-list-item pt-4 cursor-pointer">
-            <Link to="/reports" class="nav-link align-middle px-2 nav-item">
+            <Link to="/resilience" class="nav-link align-middle px-2 nav-item">
              <FaFileContract size={20}/>
-              <span class="ms-1 d-none d-sm-inline link-text px-1">Reports</span>
+              <span class="ms-1 d-none d-sm-inline link-text px-1">Resilience</span>
             </Link>
-          </li> */}
+          </li>
         </ul>
       </div>
     </>
