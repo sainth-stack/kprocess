@@ -24,16 +24,16 @@ export const KProcess = () => {
         )
     }
     return (
-        <div style={{ height: '88vh', background: 'white' }}>
-            <div className="gradient-color row p-0 m-2 mb-0 mt-0" style={{ border: '1px solid black', height: '88vh' }}>
-                <div className="col-6">
+        <div style={{}}>
+            <div className="row p-0 m-0 mb-0 mt-0 gy-1 gx-0 ms-1" style={{ border: '0px solid black'}}>
+                <div className="col-6 card gradient-color">
                     <div>
                         <h5 style={{ fontFamily: "poppins", fontWeight: 550, display: 'flex', justifyContent: "center", marginBottom: '10px', marginTop: '1px', fontSize: '22px', lineHeight: "22px", cursor: "pointer" }} onClick={() => navigate('/productivity')}>Productivity</h5>
                         <Productivity />
                     </div>
                 </div>
-                <div className="col-6 gy-0 p-0" style={{ borderLeft: '0px solid black' }}>
-                    <div style={{ borderBottom: '0px solid black', paddingBottom: '10px', marginBottom: '5px', padding: '10px' }} className="mt-0">
+                <div className="col-6 gy-1 gx-0 p-0" style={{ borderLeft: '0px solid black' }}>
+                    <div style={{ paddingBottom: '10px', marginBottom: '0px', padding: '10px' }} className="mt-0 card gradient-color ms-1">
                         <h5 style={{ fontFamily: "poppins", fontWeight: 550, display: 'flex', justifyContent: "center", fontSize: '22px', lineHeight: "22px", cursor: "pointer" }} onClick={() => navigate('/sustainability')}>Sustainability</h5>
                         <div style={{ display: "flex", justifyContent: "space-around" }}>
                             <Sustainability name="CO2 Emission" image={co2} value={"15.23 KG/Ton"} target={"(Target: 14 KG/Ton)"} />
@@ -47,8 +47,8 @@ export const KProcess = () => {
                         </div>
                     </div>
 
-                    <div style={{ height: "50%" }} className="mt-0">
-                        <h5 style={{ fontFamily: "poppins", fontWeight: 550, display: 'flex', justifyContent: "center", fontSize: '22px', lineHeight: "22px", cursor: "pointer" }} onClick={() => navigate('/resilience')}>Resilience</h5>
+                    <div style={{ }} className="mt-2 card gradient-color ms-1">
+                        <h5 style={{ fontFamily: "poppins", fontWeight: 550, display: 'flex', justifyContent: "center", fontSize: '22px', lineHeight: "22px", cursor: "pointer",marginTop:'5px' }} onClick={() => navigate('/resilience')}>Resilience</h5>
                         <div style={{ display: "flex", justifyContent: "space-around" }}>
                             <Piechart options={options} />
                             <Piechart options={options2} />

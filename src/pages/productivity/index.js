@@ -89,7 +89,7 @@ export const Productivity = () => {
                     <div className="row gx-0">
                         <div className="col ">
                             <div style={{ border: '1px solid #E6E6E6', padding: 5, display: 'flex', justifyContent: '', alignItems: 'center', marginLeft: '3px', padding: '5px' }}>
-                                <div style={{ display: 'flex', flexDirection: "column", justifyContent: 'space-between', height: '155px' }}>
+                                <div style={{ display: 'flex', flexDirection: "column", justifyContent: 'space-between', height: '138px' }}>
                                     <h5 style={{ fontFamily: 'Inter', marginTop: '0.5px', fontSize: '14px', lineHeight: '16px', fontWeight: 500 }}>
                                         Utilization
                                     </h5>

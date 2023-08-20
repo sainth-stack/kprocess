@@ -172,37 +172,37 @@ export const seriesplantation = [
         data: [
             {
                 x: 'Jan',
-                y: 30,
+                y: 29000,
                 color: "#41B883",
             },
             {
                 x: 'Feb',
-                y: 80,
+                y: 10729,
                 color: "#00D8FF",
             },
             {
                 x: 'Mar',
-                y: 90,
+                y: 5000,
                 color: "#00D8FF",
             },
             {
                 x: 'Apr',
-                y: 40,
+                y: 15000,
                 color: "#00D8FF",
             },
             {
                 x: 'May',
-                y: 22,
+                y: 23000,
                 color: "#00D8FF",
             },
             {
                 x: 'Jun',
-                y: 45,
+                y: 23000,
                 color: "#00D8FF",
             },
             {
                 x: 'Jul',
-                y: 75,
+                y: 4000,
                 color: "#00D8FF",
             }
         ]

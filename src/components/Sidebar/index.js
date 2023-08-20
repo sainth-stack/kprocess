@@ -10,7 +10,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div class="shadow sidebar-scroll sticky-top zindex99" style={{ overflow: 'auto',width:'220px' }}>
+      <div class="shadow sidebar-scroll sticky-top zindex99 mt-3" style={{ overflow: 'auto',width:'220px',zIndex:99999,position:"fixed",left:0,top:60 }}>
         <ul class="sidebar-list-items" id="menu">
           <li class="sidebar-list-item pt-4 cursor-pointer">
             <Link to="/" class="nav-link align-middle px-2 nav-item">

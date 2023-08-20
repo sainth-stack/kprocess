@@ -1,7 +1,8 @@
 import { data, heading, roptions } from './data'
 import { useState } from 'react'
 import { ApexChart } from "../../components/ApexBarChart"
-import { getTitle,getData,getOdometer } from '../../utils'
+import { getTitle, getData, getOdometer } from '../../utils'
+import { RxDotFilled } from 'react-icons/rx'
 export const Resilience = () => {
     const Card = ({ img, text, series, data }) => {
         const [show, setShow] = useState(false)
@@ -9,26 +10,27 @@ export const Resilience = () => {
         return (
             <div className='d-flex p-4 ps-2 pe-2 pt-2' style={{ border: "2px solid #E6E6E6", borderRadius: '0px', }}>
                 <div>
+                    <div style={{display:"flex",justifyContent:'space-between',width:'25px'}}><RxDotFilled/> <RxDotFilled /> <RxDotFilled /></div>
                     <button className='btn btn-primary mb-2' onClick={() => setShow(!show)}>IPR</button>
                     <img src={img} alt="img" height={"100px"} className='mt-2' />
                     {show && <div className='card p-2' style={{ position: 'absolute', marginLeft: "70px", marginTop: "-160px", zIndex: 9999 }}>
                         {data.inferences?.length > 0 && <div>
                             {getTitle("Inferences", "#427ae3")}
-                            {getOdometer(data.inferences,"#427ae3")}
+                            {getOdometer(data.inferences, "#427ae3")}
                         </div>}
                         {data.recomondations?.length > 0 && <div>
                             {getTitle("Recommendations", "#800080")}
-                            {getData(data.recomondations,"#800080")}
+                            {getData(data.recomondations, "#800080")}
                         </div>}
                         {data.predictions?.length > 0 && <div className='mt-2'>
                             {getTitle("Predictions", "#39c734")}
-                            {getData(data?.predictions,"#39c734")}
+                            {getData(data?.predictions, "#39c734")}
                         </div>}
 
                     </div>}
                 </div>
                 <div width={"70%"} className='ms-5'>
-                    <h5 style={{ fontFamily: "Inter", fontSize: '18px', fontWeight: 600, height: '50px', marginBottom: '0px',width:"220px" }}>{text}</h5>
+                    <h5 style={{ fontFamily: "Inter", fontSize: '18px', fontWeight: 600, height: '50px', marginBottom: '0px', width: "220px" }}>{text}</h5>
                     <div style={{ position: 'relative', right: '40px' }}>
                         <ApexChart series={series} options={roptions} width={"100%"} />
                     </div>

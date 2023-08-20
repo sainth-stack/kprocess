@@ -19,7 +19,7 @@ export function AdminLayout(props) {
             <div className={""}>
               <Sidebar />
             </div>
-            <div className="p-0 m-0 w-100 main-content">
+            <div className="p-0 w-100 main-content">
             <Outlet />
             </div>
           </div>
