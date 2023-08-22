@@ -1,7 +1,7 @@
 import React from "react"
 import { ApexChart } from "../components/ApexBarChart"
-
-export const getData = (list,color) => {
+import { RxCross2 } from 'react-icons/rx'
+export const getData = (list, color) => {
     return <ul style={{ listStyle: "none" }} className='p-0 m-0 ps-1'>
         {
             list.map((item) => {
@@ -10,11 +10,18 @@ export const getData = (list,color) => {
         }
     </ul>
 }
-export const getTitle = (title, color) => {
+export const getTitle = (title, color, handleClosr) => {
+    const handleClose = () => {
+        handleClosr()
+    }
     return (
-        <h5 style={{ fontFamily: "Poppins", fontWeight: 500, fontSize: '14px', display: 'flex', alignItems: "center", padding: 0, margin: 0 }}>
-            <div style={{ height: "12px", width: "12px", background: color, borderRadius: "50%", marginRight: "5px" }}></div>  {title}
-        </h5>
+        <div className="d-flex justify-content-between">
+            <h5 style={{ fontFamily: "Poppins", fontWeight: 500, fontSize: '14px', display: 'flex', alignItems: "center", padding: 0, margin: 0 }}>
+                <div style={{ height: "12px", width: "12px", background: color, borderRadius: "50%", marginRight: "5px" }}></div>  {title}
+            </h5>
+            <RxCross2 cursor={"pointer"} color="" onClick={() => handleClose()} />
+        </div>
+
     )
 }
 
@@ -64,6 +71,6 @@ export const getOdometer = (data) => {
         },
     }
     return (<div style={{ display: "flex", justifyContent: "start" }}>
-        <ApexChart series={data} options={options} type='radialBar' height={"150px"} width={""}/>
+        <ApexChart series={data} options={options} type='radialBar' height={"150px"} width={""} />
     </div>)
 }

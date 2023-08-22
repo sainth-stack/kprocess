@@ -493,7 +493,7 @@ export var options6 = {
                     name: {
                         show: true,
                         offsetY: -15,
-                        formatter: () => ['Business','Continuity Plan']
+                        formatter: () => ['Cyber','Security']
                     },
                     value: {
                         show: true,

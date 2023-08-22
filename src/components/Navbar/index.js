@@ -23,7 +23,7 @@ function Navbar() {
     } else if (location.pathname == '/sustainability') {
       setName("Sustainability")
     } else {
-      setName("Dashoard")
+      setName("KProcess")
     }
   },[location.pathname])
 
