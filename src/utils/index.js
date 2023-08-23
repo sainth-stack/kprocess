@@ -25,7 +25,7 @@ export const getTitle = (title, color, handleClosr) => {
     )
 }
 
-export const getOdometer = (data) => {
+export const getOdometer = (data,opt) => {
     var options = {
         chart: {
             height: 350,
@@ -71,6 +71,6 @@ export const getOdometer = (data) => {
         },
     }
     return (<div style={{ display: "flex", justifyContent: "start" }}>
-        <ApexChart series={data} options={options} type='radialBar' height={"150px"} width={""} />
+        <ApexChart series={data} options={opt?opt:options} type='radialBar' height={"150px"} width={""} />
     </div>)
 }

@@ -172,37 +172,37 @@ export const seriesplantation = [
         data: [
             {
                 x: 'Jan',
-                y: 29000,
+                y: 10444,
                 color: "#41B883",
             },
             {
                 x: 'Feb',
-                y: 10729,
+                y: 10200,
                 color: "#00D8FF",
             },
             {
                 x: 'Mar',
-                y: 5000,
+                y: 9200,
                 color: "#00D8FF",
             },
             {
                 x: 'Apr',
-                y: 15000,
+                y: 5325,
                 color: "#00D8FF",
             },
             {
                 x: 'May',
-                y: 23000,
+                y: 6221,
                 color: "#00D8FF",
             },
             {
                 x: 'Jun',
-                y: 23000,
+                y: 9745,
                 color: "#00D8FF",
             },
             {
                 x: 'Jul',
-                y: 4000,
+                y: 11243,
                 color: "#00D8FF",
             }
         ]
@@ -258,7 +258,23 @@ export const optionsplantation = {
                     .goals
             return `${val}`
         }
-    }
+    },
+    annotations: {
+        yaxis: [
+          {
+            y: 9000,
+            borderColor: 'red',
+            label: {
+              borderColor: '#39c734',
+              style: {
+                color: '#fff',
+                background: '#39c734'
+              },
+              text: 'Planned 9000'
+            }
+          }
+        ]
+      }
     // colors: colors
 }
 
@@ -270,12 +286,12 @@ export const series3 = [
         data: [
             {
                 x: ["Robotic", "Arm"],
-                y: 195000,
+                y: 105000,
                 color: "#41B883",
             },
             {
                 x: ['Roller', 'Belts'],
-                y: 138400,
+                y: 88400,
                 color: "#00D8FF",
             },
             {
@@ -285,7 +301,7 @@ export const series3 = [
             },
             {
                 x: ['Chillers'],
-                y: 58000,
+                y: 158000,
                 color: "#00D8FF",
             }
         ]

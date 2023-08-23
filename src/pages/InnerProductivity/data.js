@@ -1,21 +1,25 @@
 export var options = {
   series1: [{
-    name: 'Machine-A',
-    data: [44, 30, 22, 25, 40, 46]
+    name: 'Robotic Arm',
+    data: [14000, 30000, 22000, 25000, 40000, 46000]
   }, {
-    name: 'Machine-B',
-    data: [34, 42, 12, 33, 41, 29]
+    name: 'Roller Belts',
+    data: [34000, 42000, 12000, 33000, 41000, 29000]
   }, {
-    name: 'Machine-C',
-    data: [35, 41, 36, 26, 45, 39]
+    name: 'Boilers',
+    data: [35000, 41000, 36000, 26000, 45000, 39000]
+  },
+  {
+    name: 'Chillers',
+    data: [35000, 41000, 36000, 26000, 45000, 39000]
   }],
   chart: {
     type: 'bar',
     height: 350
   },
-  colors: ["#1b3c7a","#427ae3","#3dc7d1"],
+  colors: ["#1b3c7a", "#427ae3", "#3dc7d1", '#faa93e'],
   fill: {
-      colors: ["#1b3c7a","#427ae3","#3dc7d1"]
+    colors: ["#1b3c7a", "#427ae3", "#3dc7d1", '#faa93e']
   },
   plotOptions: {
     bar: {
@@ -40,11 +44,8 @@ export var options = {
   },
   yaxis: {
     title: {
-      text: 'Machine'
-    },
-    min: 0,
-    max: 50,
-    tickAmount: 2
+      text: 'Throughout'
+    }
   },
   fill: {
     opacity: 1
@@ -52,79 +53,98 @@ export var options = {
   tooltip: {
     y: {
       formatter: function (val) {
-        return "$ " + val + " thousands"
+        return val
       }
     }
   }
 };
-export var options2 = {
-  series1: [{
-    name: 'Machine-A',
-    data: [57, 61, 58, 63, 60, 66]
-  }, {
-    name: 'Machine-B',
-    data: [76, 85, 101, 98, 87, 99]
-  }, {
-    name: 'Machine-C',
-    data: [66, 89, 79, 80, 99, 92]
-  }],
-  chart: {
-    type: 'bar',
-    height: 350
+export const options2 = {
+  data2: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [     
+      {
+        label: 'Robotic Arm',
+        data: [100, 300, 400, 900, 500, 600, 900, 660],
+        borderColor: '#1b3c7a',
+        backgroundColor: '#1b3c7a',
+      },
+      {
+        label: 'Roller Belts',
+        data: [150, 200, 400, 800,900,1200,900,800],
+        borderColor: '#427ae3',
+        backgroundColor: '#427ae3',
+      },
+      {
+        label: 'Boilers',
+        data: [1100, 2500, 2500, 1700,1200, 2000, 4500, 3300],
+        borderColor: '#3dc7d1',
+        backgroundColor: '#3dc7d1',
+      },
+      {
+        label: 'Chillers',
+        data: [1200, 2000, 3500, 3300,1100, 3000, 2500, 1000],
+        borderColor: '#faa93e',
+        backgroundColor: '#faa93e',
+      },
+    ],
   },
-  colors: ["#1b3c7a","#427ae3","#3dc7d1"],
-  fill: {
-      colors: ["#1b3c7a","#427ae3","#3dc7d1"]
-  },
-  plotOptions: {
-    bar: {
-      horizontal: false,
-      columnWidth: '55%',
-      endingShape: 'rounded'
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'bottom',
+      width: 12,
+        height: 12,
     },
-  },
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    show: true,
-    width: 2,
-    colors: ['transparent']
-  },
-  xaxis: {
-    categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-  },
-  yaxis: {
     title: {
-      text: 'Machine'
+      display: false,
+      text: 'Chart.js Line Chart',
     },
-    min: 0,
-    max: 100,
-    tickAmount: 2
   },
-  fill: {
-    opacity: 1
-  },
-  tooltip: {
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'Month',
+        color: 'black',
+        fontWeight: 700,
+        padding: 5
+      },
+      grid: {
+        display: false,
+      }
+    },
     y: {
-      formatter: function (val) {
-        return "$ " + val + " thousands"
+      title: {
+        display: true,
+        text: 'Operational Expenses',
+        color: 'black',
+        fontWeight: 700,
+        padding: 5
+      },
+      grid: {
+        display: false
       }
     }
   }
 };
+
 
 
 export var options3 = {
   series1: [{
-    name: 'Machine-A',
-    data: [20000]
+    name: 'Robotic Arm',
+    data: [91]
   }, {
-    name: 'Machine-B',
-    data: [50000]
+    name: 'Roller Belts',
+    data: [78]
   }, {
-    name: 'Machine-C',
-    data: [80000]
+    name: 'Boilers',
+    data: [81]
+  },
+  {
+    name: 'Chillers',
+    data: [94]
   }],
   chart: {
     type: 'bar',
@@ -146,14 +166,14 @@ export var options3 = {
     colors: ['transparent']
   },
   xaxis: {
-    categories: ['2021'],
+    categories: ['2023'],
     labels: {
       show: true,
     }
   },
-  colors: ["#1b3c7a","#427ae3","#3dc7d1"],
+  colors: ["#1b3c7a", "#427ae3", "#3dc7d1", "#faa93e"],
   fill: {
-      colors: ["#1b3c7a","#427ae3","#3dc7d1"]
+    colors: ["#1b3c7a", "#427ae3", "#3dc7d1", ""]
   },
   // yaxis: {
   //   title: {
@@ -166,103 +186,114 @@ export var options3 = {
   tooltip: {
     y: {
       formatter: function (val) {
-        return "$ " + val + " thousands"
+        return val + "%"
       }
     }
   }
 };
 
-export var options4 = {
-  series1: [{
-    name: 'Machine-A',
-    data: [44]
-  }, {
-    name: 'Machine-B',
-    data: [34]
-  }, {
-    name: 'Machine-C',
-    data: [35]
-  }],
-  chart: {
-    type: 'bar',
-    height: 350
+export const options4 = {
+  data2: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [     
+      {
+        label: 'Robotic Arm',
+        data: [4246, 4346, 4546, 4446, 4146, 4246, 4346, 4546],
+        borderColor: '#1b3c7a',
+        backgroundColor: '#1b3c7a',
+      },
+      {
+        label: 'Roller Belts',
+        data: [3898, 3698, 3598, 3498,3598,3898,3898,3998],
+        borderColor: '#427ae3',
+        backgroundColor: '#427ae3',
+      },
+      {
+        label: 'Boilers',
+        data: [4024, 4224, 4324, 4224,4024, 3924, 4024, 4124],
+        borderColor: '#3dc7d1',
+        backgroundColor: '#3dc7d1',
+      },
+      {
+        label: 'Chillers',
+        data: [4687, 4487, 4287, 4487,4787, 4687, 4587, 4887],
+        borderColor: '#faa93e',
+        backgroundColor: '#faa93e',
+      },
+    ],
   },
-  plotOptions: {
-    bar: {
-      horizontal: true,
-      columnWidth: '55%',
-      endingShape: 'rounded'
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'bottom',
+      width: 12,
+        height: 12,
+    },
+    title: {
+      display: false,
+      text: 'Chart.js Line Chart',
     },
   },
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    show: true,
-    width: 2,
-    colors: ['transparent']
-  },
-  xaxis: {
-    categories: ['2021'],
-    labels: {
-      show: true,
-    }
-  },
-  yaxis: {
-    // title: {
-    //   text: 'Machine'
-    // },
-    min: 0,
-    max: 50,
-    tickAmount: 2
-  },
-  colors: ["#1b3c7a","#427ae3","#3dc7d1"],
-  fill: {
-      colors: ["#1b3c7a","#427ae3","#3dc7d1"]
-  },
-  fill: {
-    opacity: 1
-  },
-  tooltip: {
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'Month',
+        color: 'black',
+        fontWeight: 700,
+        padding: 5
+      },
+      grid: {
+        display: false,
+      }
+    },
     y: {
-      formatter: function (val) {
-        return "$ " + val + " thousands"
+      title: {
+        display: true,
+        text: 'Up Time  2023',
+        color: 'black',
+        fontWeight: 700,
+        padding: 5
+      },
+      grid: {
+        display: false
       }
     }
   }
 };
 
 export var dounut1 = {
-    series: [20, 30,40,10],
-    labels: ["Tooling Error","Physical Damage","Opener Damage","Other Causes"],
-    colors: ["#1b3c7a","#427ae3","#3dc7d1","#39c734"],
-    fill: {
-        colors: ["#1b3c7a","#427ae3","#3dc7d1","#39c734"]
-    },
-    chart: {
-        width: 380,
-        type: 'donut',
-    },
-    plotOptions: {
-        pie: {
-            startAngle: -100,
-            endAngle: 270,
-        }
-    },
-    // dataLabels: {
-    //   enabled: false
-    // },
-    // fill: {
-    //   type: 'gradient',
-    // },
-    legend: {
-        show:true,
-          position: 'right',
-        //  bottom:0
-        //   align:'center'
-    },
-    // title: {
-    //   display:false,
-    //   text: 'Gradient Donut with custom Start-angle'
-    // },
+  series: [20, 30, 40, 10],
+  labels: ["Tooling Error", "Physical Damage", "Opener Damage", "Other Causes"],
+  colors: ["#1b3c7a", "#427ae3", "#3dc7d1", "#39c734"],
+  fill: {
+    colors: ["#1b3c7a", "#427ae3", "#3dc7d1", "#39c734"]
+  },
+  chart: {
+    width: 380,
+    type: 'donut',
+  },
+  plotOptions: {
+    pie: {
+      startAngle: -100,
+      endAngle: 270,
+    }
+  },
+  // dataLabels: {
+  //   enabled: false
+  // },
+  // fill: {
+  //   type: 'gradient',
+  // },
+  legend: {
+    show: true,
+    position: 'right',
+    //  bottom:0
+    //   align:'center'
+  },
+  // title: {
+  //   display:false,
+  //   text: 'Gradient Donut with custom Start-angle'
+  // },
 };

@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { ApexChart } from "../../components/ApexBarChart"
 import { getTitle, getData, getOdometer } from '../../utils'
 import { RxDotFilled } from 'react-icons/rx'
-import { RxCross2 } from 'react-icons/rx'
 export const Resilience = () => {
     const Card = ({ img, text, series, data }) => {
         const [show, setShow] = useState(false)
@@ -14,7 +13,7 @@ export const Resilience = () => {
         }
 
         return (
-            <div className='p-4 ps-2 pe-2 pt-2' style={{ border: "2px solid #E6E6E6", borderRadius: '0px', alignItems: 'center' }}>
+            <div className='ps-4 pe-4 pt-3' style={{ border: "2px solid #E6E6E6", borderRadius: '0px', alignItems: 'center' }}>
                 <div className='d-flex justify-content-between' >
                     <h5 style={{ fontFamily: "Inter", fontSize: '18px', fontWeight: 600, height: '50px', marginBottom: '0px', width: "220px" }}>{text}</h5>
                     <div style={{ height: '20px', justifyContent: 'space-around', display: "flex", alignItems: "center", width: "45px", borderRadius: "50px" }}>
@@ -30,7 +29,7 @@ export const Resilience = () => {
                             {hover == "pre" && <div className='card p-1' style={{ position: 'absolute', marginLeft: "0px", marginTop: "-20px", zIndex: 9999, alignItems: 'center' }}>
                                 Predictions
                             </div>}
-                            {show && <div className='card p-2' style={{ position: 'absolute', marginLeft: "-300px", marginTop: "-20px", zIndex: 9999,width:'250px' }}>
+                            {show && <div className='card p-2' style={{ position: 'absolute', marginLeft: "-300px", marginTop: "-20px", zIndex: 9999, width: '250px' }}>
                                 {label === "inf" && <div>
                                     {getTitle("Inferences", "#427ae3", handleClose)}
                                     <>{data.inferences?.length > 0 ? getOdometer(data.inferences, "#427ae3") : <li className='m-0 p-0' style={{ fontFamily: "poppins", fontWeight: 400, fontSize: '12px', width: '190px', listStyle: 'none' }}>No Inferences Found!</li>}</>
@@ -60,23 +59,44 @@ export const Resilience = () => {
     return (
         <div className="p-1 m-1">
             <div className='row gy-2 gx-3 mt-2 flex-wrap'>
-                {heading.map((item) => {
+                {heading.map((item, index) => {
                     return (
-                        <div className="col-lg-4 col-md-6 col-sm-6">
+                        <>{index < 2 && <div className="col-lg-6 col-md-6 col-sm-6">
                             <div style={{ background: '#34b4eb', fontFamily: "Inter" }} className='pt-2 pb-2 text-center text-white'>
                                 {/* <span className='lightcolor' style={{ position: 'absolute', left: 300 }}>{item.num}</span> */}
                                 <h3 className='text-center mt-2' style={{ fontSize: '22px' }}>{item.name}</h3>
                             </div>
-                        </div>
+                        </div>}</>
                     )
                 })}
             </div>
             <div className="row gy-3 gx-3 mt-2">
-                {data.map((item) => {
+                {data.map((item, index) => {
                     return (
-                        <div className='col-lg-4 col-md-6 col-sm-6'>
+                        <>{index < 6 && <div className='col-lg-6 col-md-6 col-sm-6'>
                             <Card img={item.img} text={item.name} series={item.series} data={item} />
-                        </div>
+                        </div>}</>
+                    )
+                })}
+            </div>
+            <div className='row gy-2 gx-3 mt-2 flex-wrap'>
+                {heading.map((item, index) => {
+                    return (
+                        <>{index >= 2 && <div className="col-lg-6 col-md-6 col-sm-6">
+                            <div style={{ background: '#34b4eb', fontFamily: "Inter" }} className='pt-2 pb-2 text-center text-white'>
+                                {/* <span className='lightcolor' style={{ position: 'absolute', left: 300 }}>{item.num}</span> */}
+                                <h3 className='text-center mt-2' style={{ fontSize: '22px' }}>{item.name}</h3>
+                            </div>
+                        </div>}</>
+                    )
+                })}
+            </div>
+            <div className="row gy-3 gx-3 mt-2">
+                {data.map((item, index) => {
+                    return (
+                        <>{index > 5 && <div className='col-lg-6 col-md-6 col-sm-6'>
+                            <Card img={item.img} text={item.name} series={item.series} data={item} />
+                        </div>}</>
                     )
                 })}
             </div>

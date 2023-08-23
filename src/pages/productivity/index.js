@@ -4,8 +4,10 @@ import uptime from '../../assets/svg/uptime.png'
 import through from '../../assets/svg/output.png'
 import opex from '../../assets/svg/data-center.png'
 import uparrow from '../../assets/svg/upArrow.svg'
+import { useState } from "react"
 import { series1, options1, series2, options2, series3, options3 } from "../../components/ApexBarChart/data"
 export const Productivity = () => {
+    const [hover, setHover] = useState(false)
     var series = [90, 10]
     const options = {
         chart: {
@@ -70,14 +72,18 @@ export const Productivity = () => {
             }
         }]
     }
-    const Productivity = ({ name, image, value }) => {
+    const Productivity = ({ name, image, value, target }) => {
+        const [hover, setHover] = useState(false)
         return (
-            <div style={{ border: '1px solid #E6E6E6', padding: 5, display: 'flex', flexDirection: "column", alignItems: 'center', marginLeft: '3px' }}>
+            <div style={{ border: '1px solid #E6E6E6', padding: 5, display: 'flex', flexDirection: "column", alignItems: 'center', marginLeft: '3px' }} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                 <h5 style={{ fontFamily: 'Inter', marginTop: '0.5px', fontSize: '14px', fontWeight: 500, lineHeight: '16px' }}>
                     {name}
                 </h5>
                 <img src={image} alt="Girl in a jacket" width={"25%"} className="mb-2" />
                 <h5 style={{ fontFamily: 'Inter', marginTop: '4px', fontSize: '12px', fontWeight: 500, lineHeight: '14px' }}>{value}</h5>
+                {hover && <div className="card" style={{ position: "absolute", height: "20px", padding: "20px", display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
+                    <span style={{ fontFamily: 'Inter', marginTop: '4px', fontSize: '12px', lineHeight: '14px', fontWeight: 500, textAlign: "center" }}> {target}</span>
+                </div>}
             </div>
         )
     }
@@ -88,7 +94,7 @@ export const Productivity = () => {
                     {/* <h6 style={{ fontFamily: "poppins", fontWeight: 500 }}>Production Lead Time Distribution</h6> */}
                     <div className="row gx-0">
                         <div className="col ">
-                            <div style={{ border: '1px solid #E6E6E6', padding: 5, display: 'flex', justifyContent: '', alignItems: 'center', marginLeft: '3px', padding: '5px' }}>
+                            <div style={{ border: '1px solid #E6E6E6', padding: 5, display: 'flex', justifyContent: '', alignItems: 'center', marginLeft: '3px', padding: '5px' }} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                                 <div style={{ display: 'flex', flexDirection: "column", justifyContent: 'space-between', height: '138px' }}>
                                     <h5 style={{ fontFamily: 'Inter', marginTop: '0.5px', fontSize: '14px', lineHeight: '16px', fontWeight: 500 }}>
                                         Utilization
@@ -101,20 +107,23 @@ export const Productivity = () => {
                                 <div style={{ display: 'flex', marginLeft: '50px' }}>
                                     <span style={{ fontSize: '16px', fontFamily: "poppins", fontWeight: 500 }}>10%</span> <img src={uparrow} alt="Girl in a jacket" width={"20px"} className="mb-2 ms-2" />
                                 </div>
+                                {hover && <div className="card" style={{ position: "absolute", height: "20px", padding: "20px", display: "flex", justifyContent: "center", alignItems: "center", marginTop: "-60px",marginLeft:"80px" }}>
+                                    <span style={{ fontFamily: 'Inter', marginTop: '4px', fontSize: '12px', lineHeight: '14px', fontWeight: 500, textAlign: "center" }}>10% increase MoM</span>
+                                </div>}
                             </div>
 
                         </div>
                         {/* <Productivity name="Overall Number" image={opex} value={"65.37 m/ton"} /> */}
                         <div className="col">
-                            <Productivity name="Operational Expenses" image={opex} value={"$ 11,345 (2% reduction MoM)"} />
+                            <Productivity name="Operational Expenses" image={opex} value={"$ 11,345"} target={"2% reduction MoM"} />
                         </div>
                     </div>
                     <div className="row gx-0 mt-1">
                         <div className="col-6">
-                            <Productivity name="Throughput" image={through} value={"104,536 (0.8% increase MoM)"} />
+                            <Productivity name="Throughput" image={through} value={"104,536"} target={"0.8% increase MoM"} />
                         </div>
                         <div className="col-6">
-                            <Productivity name="Uptime" image={uptime} value={"91% (0.02% decrease MoM)"} />
+                            <Productivity name="Uptime" image={uptime} value={"91%"} target={"0.02% decrease MoM"} />
                         </div>
                     </div>
                     {/* <ApexChart series={series3} options={options3}  height={"250px"} /> */}

@@ -217,7 +217,7 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
-                        <PieChart options={dounut1} width={"100%"} height={"260px"} />
+                        <PieChart options={dounut1} width={"100%"} height={"250px"} />
                     </div>
                 </div>
                 <div className="col">
@@ -255,7 +255,7 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
-                        <LineChart height={"180px"} />
+                        <LineChart height={"180px"} width={"100%"}/>
                     </div>
                 </div>
             </div>

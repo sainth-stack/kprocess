@@ -173,7 +173,7 @@ export var roptions = {
     tooltip: {
         y: {
             formatter: function (val) {
-                return "$ " + val + " thousands"
+                return val
             }
         }
     }
@@ -193,8 +193,8 @@ export const heading = [
         name: "RECOVER",
         mum: 11
     },
-    // {
-    //     name: "EVOLVE",
-    //     mum: 11
-    // }
+    {
+        name: "EVOLVE",
+        mum: 11
+    }
 ]

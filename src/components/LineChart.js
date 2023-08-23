@@ -48,7 +48,7 @@ export const options = {
     y: {
       title: {
         display: true,
-        text: 'Temperature',
+        text: 'KG/Ton',
         color: 'black',
         fontWeight: 700,
         padding: 5
@@ -91,5 +91,5 @@ export const data = {
 };
 
 export function LineChart(props) {
-  return <Line options={options} data={data} height={props.height}/>;
+  return <Line options={props.options ? props.options : options} data={props.data?props.data:data} height={props.height}/>;
 }
