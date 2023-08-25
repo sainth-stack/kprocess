@@ -28,7 +28,7 @@ export const Sustainability = () => {
     return (
         <div className="bg-white">
             <div className="row gx-1">
-                <div className="col">
+                <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6', padding: '2px', margin: '5px 0px 5px 5px' }}>
                         <div className="d-flex justify-content-between">
                             <h6 style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Energy {" (KWH)"}</h6>
@@ -63,10 +63,12 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
                         <ApexChart series={series1} options={options1} height={"250px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6', padding: '2px', margin: '5px 0px 5px 5px' }}>
                         <div className="d-flex justify-content-between">
                             <h6 style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Waste {"(Tons)"}</h6>
@@ -101,10 +103,12 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
-                        <ApexChart series={series2} options={options2} height={"250px"} width={"100%"} />
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <ApexChart series={series2} options={options2} height={"250px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6', padding: '2px', margin: '5px 0px 5px 5px' }}>
                         <div className="d-flex justify-content-between">
                             <h6 style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Plantation</h6>
@@ -139,12 +143,14 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
-                        <ApexChart series={seriesplantation} options={optionsplantation} height={"250px"} width={"100%"} />
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <ApexChart series={seriesplantation} options={optionsplantation} height={"250px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="row gx-1">
-                <div className="col">
+                <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6', padding: '2px', margin: '5px 0px 5px 5px' }}>
                         <div className="d-flex justify-content-between">
                             <h6 style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Water {" (Kilolitres)"}</h6>
@@ -179,10 +185,12 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
-                        <ApexChart series={series3} options={options3} height={"250px"} width={"100%"} />
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <ApexChart series={series3} options={options3} height={"250px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6', padding: '2px', margin: '5px 0px 5px 5px' }}>
                         <div className="d-flex justify-content-between">
                             <h6 style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Alternate Energy</h6>
@@ -217,10 +225,12 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
-                        <PieChart options={dounut1} width={"100%"} height={"250px"} />
+                        <div style={{ minHeight: "265px", maxHeight: "260px", width: "100%" }}>
+                            <PieChart options={dounut1} width={"100%"} height={"280px"} />
+                        </div>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6', padding: '2px', margin: '5px 0px 5px 5px' }}>
                         <div className="d-flex justify-content-between">
                             <h6 style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>CO2 Emission</h6>
@@ -255,7 +265,9 @@ export const Sustainability = () => {
                                 </div>
                             </div>
                         </div>
-                        <LineChart height={"180px"} width={"100%"}/>
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <LineChart height={"260px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
             </div>

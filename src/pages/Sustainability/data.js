@@ -261,20 +261,20 @@ export const optionsplantation = {
     },
     annotations: {
         yaxis: [
-          {
-            y: 9000,
-            borderColor: 'red',
-            label: {
-              borderColor: '#39c734',
-              style: {
-                color: '#fff',
-                background: '#39c734'
-              },
-              text: 'Planned 9000'
+            {
+                y: 9000,
+                borderColor: 'red',
+                label: {
+                    borderColor: '#39c734',
+                    style: {
+                        color: '#fff',
+                        background: '#39c734'
+                    },
+                    text: 'Planned 9000'
+                }
             }
-          }
         ]
-      }
+    }
     // colors: colors
 }
 
@@ -390,7 +390,7 @@ export var dounut1 = {
     // },
     legend: {
         show: true,
-        position: 'right',
+        position: 'bottom',
         bottom: 0
         //   align:'center'
     },
@@ -404,33 +404,33 @@ export var dounut1 = {
 
 export const data = [
     {
-        inferences: ["Energy consumption by Chillers is 7% more than energy consumed by the other 3 types of machines","During the period of observation, Boilers have consumed least energy, 3% down MoM"],
-        recomondations: ["Chillers may be operated with multiple temperature ranges to maintain overall optimal value with reduced electricity consumption","Reduce machine idling by switching off machines with a set pattern"],
+        inferences: ["Energy consumption by Chillers is 7% more than energy consumed by the other 3 types of machines", "During the period of observation, Boilers have consumed least energy, 3% down MoM"],
+        recomondations: ["Chillers may be operated with multiple temperature ranges to maintain overall optimal value with reduced electricity consumption", "Reduce machine idling by switching off machines with a set pattern"],
         predictions: ["Total energy consumption over next 2 months is expected to be 10.5 MWh and 12 MWh"]
     },
     {
-        inferences: ["Overall waste generation is found to be within the set limits","Recyclable waste segregation needs attention as the aggregate so far is less than expected"],
-        recomondations: ["Enforce recyclable waste segregation and collection with stringent measures","Treat critical waste to ensure reduced intensity and impact"],
+        inferences: ["Overall waste generation is found to be within the set limits", "Recyclable waste segregation needs attention as the aggregate so far is less than expected"],
+        recomondations: ["Enforce recyclable waste segregation and collection with stringent measures", "Treat critical waste to ensure reduced intensity and impact"],
         predictions: ["Waste generation over next 3 months expected to reduce by 2.5%, 3% and 1.2%"]
     },
     {
-        inferences: ["Summer months have seen lower count of plantation as expected","Early showers helped double the plantations in the month of July."],
-        recomondations: ["Increase geo diversity as well as plant diversity","Evaluate new and inexpensive plant tracking tool in the market"],
+        inferences: ["Summer months have seen lower count of plantation as expected", "Early showers helped double the plantations in the month of July."],
+        recomondations: ["Increase geo diversity as well as plant diversity", "Evaluate new and inexpensive plant tracking tool in the market"],
         predictions: ["Expected plantation over next 2 months are 34,000 and 57,000"]
     },
     {
-        inferences: ["Recycle water usage has increased to 2.1%","Premium water purchase has gone down by 1.8%"],
-        recomondations: ["Adhere to water supply schedules","Conduct weekly water leak checks across all production plants"],
+        inferences: ["Recycle water usage has increased to 2.1%", "Premium water purchase has gone down by 1.8%"],
+        recomondations: ["Adhere to water supply schedules", "Conduct weekly water leak checks across all production plants"],
         predictions: ["Predicted water consumption over next 3 months are 21,000; 24,500; and 19,300"]
     },
     {
-        inferences: ["Solar energy generated is highest during the fiscal","Wind energy dropped by 0.7% YoY owing to unplanned downtime of two windmills"],
-        recomondations: ["Consider energy generation from produced waste","10% of energy generated may be transferred to central power grid"],
-        predictions: ["Solar energy generation forecast over next 2 months - 0.81 MW and 0.74 MW","Wind energy forecast for next 2 months - 1.1 MW and 1.7 MW"]
+        inferences: ["Solar energy generated is highest during the fiscal", "Wind energy dropped by 0.7% YoY owing to unplanned downtime of two windmills"],
+        recomondations: ["Consider energy generation from produced waste", "10% of energy generated may be transferred to central power grid"],
+        predictions: ["Solar energy generation forecast over next 2 months - 0.81 MW and 0.74 MW", "Wind energy forecast for next 2 months - 1.1 MW and 1.7 MW"]
     },
     {
-        inferences: ["CO2 emission has been all time low in the months - January and April","March and June have been found to be high emission months, correlating with doubled production in those months"],
-        recomondations: ["Consider establishing CO2 treatment plants","Release processed CO2 into air instead of direct emissions"],
-        predictions: ["Overall CO2 emission in the next 2 months predicted to be 140KG and 167KG","Expected carbon neutralization in next 3 months is 1.7%, 1.85% and 1.47%"]
+        inferences: ["CO2 emission has been all time low in the months - January and April", "March and June have been found to be high emission months, correlating with doubled production in those months"],
+        recomondations: ["Consider establishing CO2 treatment plants", "Release processed CO2 into air instead of direct emissions"],
+        predictions: ["Overall CO2 emission in the next 2 months predicted to be 140KG and 167KG", "Expected carbon neutralization in next 3 months is 1.7%, 1.85% and 1.47%"]
     }
 ]

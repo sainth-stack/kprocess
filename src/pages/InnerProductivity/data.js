@@ -280,6 +280,7 @@ export var dounut1 = {
       endAngle: 270,
     }
   },
+  // responsive:true,
   // dataLabels: {
   //   enabled: false
   // },
@@ -287,11 +288,11 @@ export var dounut1 = {
   //   type: 'gradient',
   // },
   legend: {
-    show: true,
-    position: 'right',
-    //  bottom:0
-    //   align:'center'
-  },
+    show: false,
+    position: 'bottom',
+     width:250,
+    //  horizontalAlign:'center' 
+     },
   // title: {
   //   display:false,
   //   text: 'Gradient Donut with custom Start-angle'

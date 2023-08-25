@@ -95,7 +95,7 @@ export const InnerProductivity = () => {
                                 <AreaChart options={aoptions} series={aseries} />
                                 <div className="d-flex text-white justify-content-center" style={{ height: "50px", width: '100%', background: "#d10f0f", borderRadius: '8px', alignItems: 'center', fontSize: '18px' }} onMouseEnter={() => setDecHover(true)} onMouseLeave={() => setDecHover(false)}>
                                     <BiDownArrowAlt size={24} style={{ marginRight: "10px", marginTop: "2px" }} />  -6%
-                                    {decHover && <div className="card text-center p-1" style={{width:'170px',height:'30px',position:'absolute',display:"flex",justifyContent:"center",alignItems:'center',marginLeft:'-30px',marginTop:'-20px'}}>
+                                    {decHover && <div className="card text-center p-1" style={{ width: '170px', height: '30px', position: 'absolute', display: "flex", justifyContent: "center", alignItems: 'center', marginLeft: '-30px', marginTop: '-20px' }}>
                                         6% decrease MoM
                                     </div>}
                                 </div>
@@ -200,10 +200,10 @@ export const InnerProductivity = () => {
                             </div>
                             <div>
                                 <AreaChart options={aoptions3} series={aseries3} />
-                                <div className="d-flex text-white justify-content-center" style={{ height: "50px", width: '100%', background: "#39c734", borderRadius: '8px', alignItems: 'center', fontSize: '18px' }} onMouseEnter={()=>setIncHover(true)} onMouseLeave={()=>{setIncHover(false)}}>
+                                <div className="d-flex text-white justify-content-center" style={{ height: "50px", width: '100%', background: "#39c734", borderRadius: '8px', alignItems: 'center', fontSize: '18px' }} onMouseEnter={() => setIncHover(true)} onMouseLeave={() => { setIncHover(false) }}>
                                     <BiUpArrowAlt size={24} style={{ marginRight: "10px", marginTop: "2px" }} />  4%
-                                    {incHover && <div className="card text-center p-1" style={{width:'170px',height:'30px',position:'absolute',display:"flex",justifyContent:"center",alignItems:'center',marginLeft:'-30px',marginTop:'-20px'}}>
-                                    4% increase MoM
+                                    {incHover && <div className="card text-center p-1" style={{ width: '170px', height: '30px', position: 'absolute', display: "flex", justifyContent: "center", alignItems: 'center', marginLeft: '-30px', marginTop: '-20px' }}>
+                                        4% increase MoM
                                     </div>}
                                 </div>
                             </div>
@@ -216,13 +216,17 @@ export const InnerProductivity = () => {
                 <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6' }}>
                         <h6 className="ps-2" style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Overall Productivity - Utilization (YTD)</h6>
-                        <ApexChart series={options3.series1} options={options3} height={"250px"} width={"100%"} />
+                        <div style={{ minHeight: "245px", maxHeight: "245px", width: "100%" }}>
+                        <ApexChart series={options3.series1} options={options3} height={"230px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
                 <div className="col-4">
                     <div style={{ border: '1px solid #E6E6E6' }}>
                         <h6 className="ps-2" style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Lost Units:Causes</h6>
-                        <PieChart options={dounut1} width={445} />
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <PieChart options={dounut1} height="283px" width={445} />
+                        </div>
                         {/* <div style={{ display: "flex", justifyContent: 'end', alignItems: "center", paddingRight: '10px' }}>
                             <div style={{ height: '13px', width: '13px', color: 'red', background: 'lightgreen', borderRadius: '50%', marginBottom: '15px', marginRight: '5px' }}></div><p>Tooling Error</p>
                             <div style={{ height: '13px', width: '13px', color: 'red', background: 'lightgreen', borderRadius: '50%', marginBottom: '15px', marginRight: '5px' }}></div><p>Physical Damage</p>
@@ -232,10 +236,12 @@ export const InnerProductivity = () => {
                     </div>
                 </div>
                 <div className="col-4">
-                    <div style={{ border: '1px solid #E6E6E6' }}>
+                    <div style={{ border: '1px solid #E6E6E6', minHeight: "230px" }}>
                         <h6 className="ps-2" style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Overall Productivity - Uptime (YTD)</h6>
                         {/* <ApexChart series={options4.series1} options={options4} height={"250px"} width={"100%"} /> */}
-                        <LineChart data={options4.data2} options={options4} height={"180px"} width={"100%"}/>
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <LineChart data={options4.data2} options={options4} height={"200px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -243,14 +249,18 @@ export const InnerProductivity = () => {
                 <div className="col-6">
                     <div style={{ border: '1px solid #E6E6E6' }}>
                         <h6 className="ps-2" style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Productivity - Throughout</h6>
-                        <ApexChart series={options.series1} options={options} height={"250px"} width={"100%"} />
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <ApexChart series={options.series1} options={options} height={"250px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
                 <div className="col-6">
                     <div style={{ border: '1px solid #E6E6E6' }}>
                         <h6 className="ps-2" style={{ fontFamily: "poppins", fontWeight: 500, fontSize: '18px', fontWeight: 600, display: 'flex', justifyContent: "start" }}>Productivity - OpEx</h6>
                         {/* <ApexChart series={options2.series1} options={options2} height={"250px"} width={"100%"} /> */}
-                        <LineChart data={options2.data2} options={options2} height={"120px"} width={"100%"}/>
+                        <div style={{ minHeight: "265px", maxHeight: "265px", width: "100%" }}>
+                            <LineChart data={options2.data2} options={options2} height={"140px"} width={"100%"} />
+                        </div>
                     </div>
                 </div>
             </div>
