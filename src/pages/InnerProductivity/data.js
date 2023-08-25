@@ -288,9 +288,10 @@ export var dounut1 = {
   //   type: 'gradient',
   // },
   legend: {
-    show: false,
+    show: true,
     position: 'bottom',
      width:250,
+     offsetX: 80,
     //  horizontalAlign:'center' 
      },
   // title: {
