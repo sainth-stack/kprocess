@@ -32,7 +32,7 @@ export const Resilience = () => {
                             {show && <div className='card p-2' style={{ position: 'absolute', marginLeft: "-300px", marginTop: "-20px", zIndex: 9999, width: '250px' }}>
                                 {label === "inf" && <div>
                                     {getTitle("Inferences", "#427ae3", handleClose)}
-                                    <>{data.inferences?.length > 0 ? getOdometer(data.inferences, "#427ae3") : <li className='m-0 p-0' style={{ fontFamily: "poppins", fontWeight: 400, fontSize: '12px', width: '190px', listStyle: 'none' }}>No Inferences Found!</li>}</>
+                                    <>{data.inferences?.length > 0 ? getOdometer(data?.inferences) : <li className='m-0 p-0' style={{ fontFamily: "poppins", fontWeight: 400, fontSize: '12px', width: '190px', listStyle: 'none' }}>No Inferences Found!</li>}</>
                                 </div>}
                                 {label === "rec" && <div>
                                     {getTitle("Recommendations", "#800080", handleClose)}
