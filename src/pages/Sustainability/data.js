@@ -265,10 +265,11 @@ export const optionsplantation = {
                 y: 9000,
                 borderColor: 'red',
                 label: {
-                    borderColor: '#39c734',
+                    borderColor: 'none',
                     style: {
-                        color: '#fff',
-                        background: '#39c734'
+                        color: '#d10f0f',
+                        fontSize:"10px",
+                        background: 'none'
                     },
                     text: 'Planned 9000'
                 }

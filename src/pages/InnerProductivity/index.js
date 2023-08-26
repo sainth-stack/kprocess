@@ -85,10 +85,10 @@ export const InnerProductivity = () => {
                         {/* <ApexChart series={options3.series1} options={options3} height={"250px"} width={"100%"} /> */}
                         <div className="d-flex text-center justify-content-between p-2" style={{ background: "", alignItems: 'center' }}>
                             <div >
-                                <h2>428,297</h2>
+                                <h2 style={{color:"#39c734"}}>428,297</h2>
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                     <h6>Target</h6>
-                                    <h6 style={{ color: '#d10f0f' }}>450,000</h6>
+                                    <h6 style={{ color: 'black' }}>450,000</h6>
                                 </div>
                             </div>
                             <div>
@@ -192,10 +192,10 @@ export const InnerProductivity = () => {
                             </div>                        </div>
                         <div className="d-flex text-center justify-content-between p-2" style={{ background: "", alignItems: 'center' }}>
                             <div >
-                                <h2>72.12%</h2>
+                                <h2 style={{color:"#39c734"}}>72.12%</h2>
                                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                     <h6 >Target</h6>
-                                    <h6 style={{ color: '#d10f0f' }}>75%</h6>
+                                    <h6 style={{ color: 'black' }}>75%</h6>
                                 </div>
                             </div>
                             <div>
